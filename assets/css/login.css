@@ -21,3 +21,10 @@ header {
 .login h2 {
     margin-bottom: 1em;
 }
+.profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    cursor: pointer;
+}
