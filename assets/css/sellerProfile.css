@@ -1,0 +1,26 @@
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.gallery img {
+    width: 100%;
+    height: auto;
+}
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.selected-pill {
+    background-color: #007bff;
+    color: white;
+}
+.selected-item {
+    display: inline-block;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+.navbar-brand img {
+max-height: 50px; }
