@@ -6,7 +6,35 @@
     <title>Edit Seller Information - Mammy Koker</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="assets/css/sellerProfile.css">
+    <style>
+        .profile-picture {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+        }
+        .gallery img {
+            width: 100%;
+            height: auto;
+        }
+        .form-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        .selected-pill {
+            background-color: #007bff;
+            color: white;
+        }
+        .selected-item {
+            display: inline-block;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+
+        .navbar-brand img {
+        max-height: 50px; 
+        }
+    </style>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
@@ -65,7 +93,7 @@
         <h2 class="text-center mb-4">Edit Seller Information</h2>
         <form id="seller-form" enctype="multipart/form-data" class="p-4 border rounded">
             <div class="mb-3 text-center">
-                <img src="assets/images/placeholder.jpeg" alt="Profile Picture" class="profile-picture mb-3" id="profile-picture">
+                <img src="default-profile.jpg" alt="Profile Picture" class="profile-picture mb-3" id="profile-picture">
                 <input type="file" id="profile-picture-input" accept="image/*" style="display: none;">
             </div>
             
