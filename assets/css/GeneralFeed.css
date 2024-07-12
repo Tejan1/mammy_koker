@@ -1,0 +1,57 @@
+.navbar-brand img {
+    max-height: 50px; 
+}
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+
+.navbar-brand img {
+    max-height: 50px; 
+}
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+.hero-section {
+    position: relative;
+    height: 500px;
+}
+.carousel-item img {
+    height: 500px;
+    object-fit: cover;
+    width: 100%;
+}
+.hero-buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+.hero-buttons .btn {
+    margin: 0 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+.card img {
+    object-fit: cover;
+    height: 200px;
+}
+.card-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
