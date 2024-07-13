@@ -34,6 +34,13 @@ if (!$connection){
          //the user login credentyial is correct
          //redirecting user to the personalized home page
          $_SESSION["email"] = $email;
+
+          //checking if the user wants the device to remember his/her login details, so that the sign in process will be automatically done for them
+          //Note: the system will only remember you for 30 days, after 30 days, you will need to sign in again
+          if ($remember_me_flag != ""){
+              setcookie("email", $email, (30 * 86400), "/");
+              setcookie("password", $password, (30 * 86400), "/");
+          }
          
          header('Location: https://mammy-koker/home.html');
          exit;
