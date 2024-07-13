@@ -8,15 +8,15 @@ $Lname = $_POST["Lname"];
 $phone = $_POST["phone"];
 $bio = $_POST["bio"];
 $password = $_POST["password"];
-$university = $_POST["university"];
-$major = $_POST["major"];
+//$university = $_POST["university"];
+//$major = $_POST["major"];
 
 // These are info needed to connect to the database
 $databaseServerName = "";
 $databaseUserName = "";
 $databaseUserPassword = "";
 
-//These code below is use to create connection to our student database
+//These code below is use to create connection to our mammy koker database
 $connection = mysqli_connect($databaseServerName, $databaseUserName, $databaseUserPassword);
 
 //the code below is use to check if we have successfull connected to the database
@@ -38,16 +38,16 @@ if (!$connection){
         //now we send a confirmation email to the user that will hold randomly generated five digits for email verification
         $receiverEmail = $email;
 
-        $message = rand(10000, 99999);
-        $mess = "Enter the numbers below to confirm Email";
+        $message = rand(10000, 99999) . "Enter the numbers below to confirm Email";
+        
 
         // send email
-        $email_sent = mail($email,"Mammy Koker",$msg . $mess);
+        $email_sent = mail($email,"Mammy Koker",$messag);
 
         if ($email_sent){
 
             //writing the otp and the email to a table for validation
-            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . ")";
+            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . "," . date(h:i) . ")";
             if (mysqli_query($conn, $sql_query)){
                 //redirecting user to the enter email confirmation code page
                 $_SESSION["email"] = $email;
