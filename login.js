@@ -5,7 +5,10 @@ document.addEventListener('DOMContentLoaded', () => {
             let email = document.cookie[0];
             let password = document.cookie[1];
 
-            document.getElementById()
+            //setting the form input data to the data found on the cookie file
+            document.getElementById("email").innerHtml = email;
+            document.getElementById("password").innerHtml = password;
+            
 
             }
     
