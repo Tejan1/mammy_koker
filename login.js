@@ -8,6 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
             //setting the form input data to the data found on the cookie file
             document.getElementById("email").innerHtml = email;
             document.getElementById("password").innerHtml = password;
+
+            document.getElementById("login-form").submit;
             
 
             }
