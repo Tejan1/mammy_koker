@@ -3,6 +3,7 @@ session_start();
 //getting login details entered
 $email = $_POST["email"];
 $password = $_POST["password"];
+$remember_me_flag = $_POST["remember_me"];
 
 
 // These are info needed to connect to the database
