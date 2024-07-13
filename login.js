@@ -1,4 +1,14 @@
 document.addEventListener('DOMContentLoaded', () => {
+    //checking if the user already has a sign in detail stored on the current device that he/she is using the expire date is not yet reached
+    function attempt_auto_login(){
+        if (document.cookie != ""){
+            let email = document.cookie[0];
+            let password = document.cookie[1];
+
+            document.getElementById()
+
+            }
+    
     // Google Sign-In
     google.accounts.id.initialize({
         client_id: '291963249242-p3i1eg8682k1u9shtm07mg3h096jjfd1.apps.googleusercontent.com',
