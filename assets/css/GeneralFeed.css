@@ -55,3 +55,9 @@
     padding: 5px 10px;
     border-radius: 5px;
 }
+.seller-card {
+    margin-bottom: 20px;}
+    .card-img-top {
+        height: 200px;
+        object-fit: cover;
+    }

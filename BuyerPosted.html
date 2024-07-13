@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Posted Gigs - Mammy Koker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+<style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .gigs-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 20px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .gig-card {
+            margin-bottom: 20px;
+        }
+        .gig-card .card-body {
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img style="margin-right: 15px;" src="assets/images/logo.png" alt="Mammy Koker Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex mx-auto flex-grow-1">
+                    <input class="form-control me-2 flex-grow-1" type="search" placeholder="Search for a job you want get done" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="margin-left: 30px; margin-right: 30px; margin-top: 10px;"  href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="#">Graphics & Design</a></li>
+                            <li><a class="dropdown-item" href="#">Home Tutoring</a></li>
+                            <li><a class="dropdown-item" href="#">Accounting</a></li>
+                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Writing & Translation</a></li>
+                            <li><a class="dropdown-item" href="#">Video Editing</a></li>
+                            <li><a class="dropdown-item" href="#">Web Design & Development</a></li>
+                            <li><a class="dropdown-item" href="#">Photography</a></li>
+                            <li><a class="dropdown-item" href="#">Music & Audio</a></li>
+                            <li><a class="dropdown-item" href="#">Programming & Tech</a></li>
+                            <li><a class="dropdown-item" href="#">Data</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Personal Growth & Hobbies</a></li>
+                            <li><a class="dropdown-item" href="#">End-to-End Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/images/logo.png" alt="Profile Picture" class="profile-picture">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="sellerProfile.html">Become a Seller</a></li>
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="#">Insights</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+
+    <div class="container gigs-container">
+        <h2 class="text-center mb-4">My Posted Gigs</h2>
+
+        <!-- Example Gig Card -->
+        <div class="card gig-card">
+            <div class="card-body">
+                <h5 class="card-title" id="gig-title">Sample Gig Title</h5>
+                <h6 class="card-subtitle mb-2 text-muted" id="category">Category: Sample Category</h6>
+                <p class="card-text" id="description">This is a sample description of the gig. It provides details about the gig requirements and expectations.</p>
+                <p class="card-text"><strong>Budget:</strong> $<span id="budget">100</span></p>
+                <p class="card-text"><strong>Deadline:</strong> <span id="deadline">2024-12-31</span></p>
+                <p class="card-text"><strong>Attachments:</strong> <span id="attachments">No attachments</span></p>
+                <button class="btn btn-primary">Edit</button>
+                <button class="btn btn-danger">Delete</button>
+            </div>
+        </div>
+
+        <!-- Add more gig cards here -->
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Sample data - replace with actual data retrieval from server or local storage
+        const latestGig = {
+            title: "Design a Logo",
+            category: "Graphics & Design",
+            description: "I need a professional logo designed for my new business. The logo should be modern and unique.",
+            budget: 150,
+            deadline: "2024-08-01",
+            attachments: ["logo-sketch.jpg", "brand-colors.pdf"]
+        };
+
+        // Update the gig card with the latest gig details
+        document.getElementById('gig-title').innerText = latestGig.title;
+        document.getElementById('category').innerText = `Category: ${latestGig.category}`;
+        document.getElementById('description').innerText = latestGig.description;
+        document.getElementById('budget').innerText = latestGig.budget;
+        document.getElementById('deadline').innerText = latestGig.deadline;
+        document.getElementById('attachments').innerText = latestGig.attachments.join(', ');
+
+        // Functionality for Edit and Delete buttons can be added here
+    </script>
+</body>
+</html>
