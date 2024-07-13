@@ -6,15 +6,16 @@ $Lname = $_POST["Lname"];
 $phone = $_POST["phone"];
 $bio = $_POST["bio"];
 $password = $_POST["password"];
-$university = $_POST["university"];
-$major = $_POST["major"];
+
+//$university = $_POST["university"];
+//$major = $_POST["major"];
 
 // These are info needed to connect to the database
 $databaseServerName = "";
 $databaseUserName = "";
 $databaseUserPassword = "";
 
-//These code below is use to create connection to our student database
+//These code below is use to create connection to our mammy koker database
 $connection = mysqli_connect($databaseServerName, $databaseUserName, $databaseUserPassword)
 
 //the code below is use to check if we have successfull connected to the database
@@ -45,7 +46,7 @@ if (!$connection){
         if ($email_sent){
 
             //writing the otp and the email to a table for validation
-            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . ")";
+            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . "," . date("h:m") .")";
             if (mysqli_query($conn, $sql_query)){
                 //redirecting user to the enter email confirmation code page
                 
