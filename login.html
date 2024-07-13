@@ -15,7 +15,7 @@
             <img src="assets/images/logo.png" style="width: 70px; height: 60px;" alt="Mammy Koker Logo" class="logo">
             <nav>
                 <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="#">login</a></li>
+                    <li class="nav-item"><a class="nav-link text-white" href="registeration.html">register</a></li>
                 </ul>
             </nav>
         </div>
@@ -33,14 +33,26 @@
                     <label for="password" class="form-label">Password:</label>
                     <input type="password" class="form-control" id="password" name="password" required>
                 </div>
+               
+                <div class="mb-3 text-center">
+                    <a href="forgot-password.php" class="text-decoration-none" >Forgot Password?</a>
+                </div>
+                <button type="submit" class="btn btn-primary w-100" style="margin-bottom: 8px;">Login</button>
+                <div class="form-check mb-3">
+                    <input class="form-check-input" type="checkbox" id="remember-me">
+                    <label class="form-check-label" for="remember-me">
+                        Remember Me
+                    </label>
+                </div>
+
+                <div class="mb-3 text-center">
+                    ------- or --------
+                </div>
+
                 <div class="mb-3 text-center">
                     <button type="button" class="btn btn-danger" id="google-signin">Sign in with Google</button>
                     <button type="button" class="btn btn-primary" id="facebook-signin">Sign in with Facebook</button>
                 </div>
-                <div class="mb-3 text-center">
-                    <a href="forgot-password.php" class="text-decoration-none">Forgot Password?</a>
-                </div>
-                <button type="submit" class="btn btn-primary w-100">Login</button>
             </form>
         </div>
     </section>
