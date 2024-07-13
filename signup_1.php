@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 //reading data from the signup form
 $email = $_POST["email"];
 $FName = $_POST["FName"];
@@ -15,7 +17,7 @@ $databaseUserName = "";
 $databaseUserPassword = "";
 
 //These code below is use to create connection to our student database
-$connection = mysqli_connect($databaseServerName, $databaseUserName, $databaseUserPassword)
+$connection = mysqli_connect($databaseServerName, $databaseUserName, $databaseUserPassword);
 
 //the code below is use to check if we have successfull connected to the database
 if (!$connection){
@@ -40,7 +42,22 @@ if (!$connection){
         $mess = "Enter the numbers below to confirm Email";
 
         // send email
-        mail($email,"Mammy Koker",$msg . $mess);
+        $email_sent = mail($email,"Mammy Koker",$msg . $mess);
+
+        if ($email_sent){
+
+            //writing the otp and the email to a table for validation
+            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . ")";
+            if (mysqli_query($conn, $sql_query)){
+                //redirecting user to the enter email confirmation code page
+                $_SESSION["email"] = $email;
+                
+                header('Location: https://mammy-koker/email_confirmation.html');
+                exit;
+            }else{
+                echo "error saving otp or password";
+            }
+        }
 
 
     } else{
