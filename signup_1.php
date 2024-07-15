@@ -29,10 +29,10 @@ if (!$connection){
 
     //setting the sql query to write on the TEMPORAL_USER table
     //the user credntials will be held at this table until the email is confirmed
-    sql="INSERT INTO TEMPORAL_USER VALUES(" . $userFirsName .","$userLastName .",". $password .","$email .","$id .","$phonenumber .")";
+    sql="INSERT INTO temporaluser VALUES(" . $userFirsName .","$userLastName .",". $password .","$email .","$id .","$phonenumber .")";
 
     //attempting to write on the TEMPORAL_USER table
-    if(mysqli_query($conn,$sql)){
+    if(mysqli_query($conn, $sql)){
 
         echo "new data insert into table successfully";
         //now we send a confirmation email to the user that will hold randomly generated five digits for email verification
@@ -42,12 +42,12 @@ if (!$connection){
         
 
         // send email
-        $email_sent = mail($email,"Mammy Koker",$messag);
+        $email_sent = mail($email,"Mammy Koker", $messag);
 
         if ($email_sent){
 
             //writing the otp and the email to a table for validation
-            $sql_query = "INSERT INTO OTPHOLDER VALUES(" . $email . "," . $message . "," . date(h:i) . ")";
+            $sql_query = "INSERT INTO otpholder VALUES(" . $email . "," . $message . "," . date(h:i) . ")";
             if (mysqli_query($conn, $sql_query)){
                 //redirecting user to the enter email confirmation code page
                 $_SESSION["email"] = $email;
