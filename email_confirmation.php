@@ -17,16 +17,16 @@ if (!$connection){
     die("Cannot connect to the database" . mysqli_connection _error);
  
  }else {
-    $sql = "SELECT OTP FROM OTPHOLDER WHERE EMAIL =" . $email;
+    $sql = "SELECT OTP FROM otpholder WHERE EMAIL =" . $email;
 
     $fetch_query = mysqli_query($connection, $sql);
 
     if ($fetch_query == $code){
         //take the data that has the primary key $email from the TEMPORAL_USER table to the user USER
-        $sql = "SELECT * FROM TEMPORAL_USER WHERE EMAIL =" . $email;
+        $sql = "SELECT * FROM temporaluser WHERE EMAIL =" . $email;
         $query_result = mysqli_query($connection, $sql);
         //setting the user login details on the user table
-        $putting_sql = "INSERT INTO USER VALUES(" . $query_result[0] .","$$query_result[1] .",". $$query_result[2] .","$$query_result[3] .","$$query_result[4] .","$$query_result[5] . ")";
+        $putting_sql = "INSERT INTO user VALUES(" . $query_result[0] .","$$query_result[1] .",". $$query_result[2] .","$$query_result[3] .","$$query_result[4] .","$$query_result[5] . ")";
         $query_result_2 = mysqli_query($connection, $putting_sql);
         //and redirect the user to the login page
         header('Location: https://mammy-koker/login.html');
