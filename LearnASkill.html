@@ -19,22 +19,69 @@
             width: 100%;
             height: 400px;
         }
+        .navbar-brand img {
+    max-height: 50px; 
+}
+.profile-picture {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
     </style>
 </head>
 <body>
-    <header class="bg-dark text-white p-3">
-        <div class="container d-flex justify-content-between align-items-center">
-            <img src="logo.png" alt="Mammy Koker Logo" height="50">
-            <nav>
-                <ul class="nav">
-                    <li class="nav-item"><a class="nav-link text-white" href="index.php">Home</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="register.php">Register</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">About</a></li>
-                    <li class="nav-item"><a class="nav-link text-white" href="#">Contact</a></li>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">
+                <img style="margin-right: 15px;" src="assets/images/logo.png" alt="Mammy Koker Logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <form class="d-flex mx-auto flex-grow-1">
+                    <input class="form-control me-2 flex-grow-1" type="search" placeholder="Search for a job you want get done" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" style="margin-left: 30px; margin-right: 30px; margin-top: 10px;"  href="#" id="categoriesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Categories
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="categoriesDropdown">
+                            <li><a class="dropdown-item" href="#">Graphics & Design</a></li>
+                            <li><a class="dropdown-item" href="#">Home Tutoring</a></li>
+                            <li><a class="dropdown-item" href="#">Accounting</a></li>
+                            <li><a class="dropdown-item" href="#">Digital Marketing</a></li>
+                            <li><a class="dropdown-item" href="#">Writing & Translation</a></li>
+                            <li><a class="dropdown-item" href="#">Video Editing</a></li>
+                            <li><a class="dropdown-item" href="#">Web Design & Development</a></li>
+                            <li><a class="dropdown-item" href="#">Photography</a></li>
+                            <li><a class="dropdown-item" href="#">Music & Audio</a></li>
+                            <li><a class="dropdown-item" href="#">Programming & Tech</a></li>
+                            <li><a class="dropdown-item" href="#">Data</a></li>
+                            <li><a class="dropdown-item" href="#">Business</a></li>
+                            <li><a class="dropdown-item" href="#">Personal Growth & Hobbies</a></li>
+                            <li><a class="dropdown-item" href="#">End-to-End Projects</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="profileDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <img src="assets/images/logo.png" alt="Profile Picture" class="profile-picture">
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profileDropdown">
+                            <li><a class="dropdown-item" href="#">Edit Profile</a></li>
+                            <li><a class="dropdown-item" href="sellerProfile.html">Become a Seller</a></li>
+                            <li><a class="dropdown-item" href="#">Messages</a></li>
+                            <li><a class="dropdown-item" href="#">Insights</a></li>
+                            <li><a class="dropdown-item" href="LearnASkill.html">Learn a New Skill</a></li>
+                        </ul>
+                    </li>
                 </ul>
-            </nav>
+            </div>
         </div>
-    </header>
+    </nav>
 
     <section class="container my-5">
         <h2 class="text-center mb-4">Learn a Skill</h2>
@@ -52,19 +99,18 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <iframe width="950" height="534" src="https://www.youtube.com/embed/A48PwrG-G_8?list=PL90t8zy6iVSoI7NKzNoBAtfNDoVrByplp" title="Photoshop Tutorials | Design Professional Flyer | Poster design | Banner | by PROEML GRAPHIC" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                </div>
+<iframe id="videoFrame" src="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>                </div>
             </div>
         </div>
     </div>
 
     <script>
         const skills = [
-            { title: "Graphic Design", image: "assets/images/LearnASkillGraphicDesign.jpeg", videoUrl: "https://youtu.be/A48PwrG-G_8?list=PL90t8zy6iVSoI7NKzNoBAtfNDoVrByplp" },
-            { title: "Home Tutoring", image: "assets/images/home-tutoring.jpg", videoUrl: "https://www.youtube.com/embed/XXXXXXXXXXX" },
-            { title: "Accounting Basics", image: "assets/images/accounting.jpg", videoUrl: "https://www.youtube.com/embed/XXXXXXXXXXX" },
-            { title: "Web Development", image: "assets/images/web-development.jpg", videoUrl: "https://www.youtube.com/embed/XXXXXXXXXXX" },
-            // Add more skills as needed
+            { title: "Graphic Design", image: "assets/images/LearnASkillGraphicDesign.jpeg", videoUrl: "https://www.youtube.com/embed/xTzvQkOll2U?list=PLLlSBGLVsEPIFGSGw2zJ2K43V5vxMMMTE " },
+            { title: "Home Tutoring", image: "assets/images/hometutoring.png", videoUrl: "https://www.youtube.com/embed/nAVNmV2g1ew" },
+            { title: "Accounting Basics", image: "assets/images/accounting.jpg", videoUrl: "https://www.youtube.com/embed/wSFPj_ZqVV0?list=PLMNxhlqOTTJQxiyon8XTmS5moOf8xRSeG" },
+            { title: "Web Development", image: "assets/images/webdevelopment.png", videoUrl: "https://www.youtube.com/embed/A48PwrG-G_8?list=PL90t8zy6iVSoI7NKzNoBAtfNDoVrByplp" },
+            // I'll have to add  more skills later
         ];
 
         function displaySkills(skills) {

@@ -1,0 +1,26 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.logo {
+    width: 150px;
+}
+
+.transaction-section {
+    margin-top: 50px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.payment-option {
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+}
+
+.form-check {
+    display: inline-block;
+    margin-right: 10px;
+}

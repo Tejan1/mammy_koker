@@ -61,3 +61,10 @@
         height: 200px;
         object-fit: cover;
     }
+
+    seller-btn :hover {
+        color: white;
+         background-color: rgb(50 104 255);
+         border-color : white;
+         border-width: 3px; 
+    }
