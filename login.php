@@ -20,7 +20,7 @@ if (!$connection){
  
  } else{
 
-    $sql = "SELECT EMAIL FROM CREDENTIAL WHERE EMAIL =" . $email;
+    $sql = "SELECT EMAIL FROM credential WHERE EMAIL =" . $email;
 
     $fetch_query = mysqli_query($connection, $sql);
     
@@ -28,10 +28,11 @@ if (!$connection){
     echo $fetch_query;
 
     if ($fetch_query != ""){
-      $sql = "SELECT PASSWORD FROM CREDENTIAL WHERE EMAIL =" . $email;
+      $sql = "SELECT PASSWORD FROM credential WHERE EMAIL =" . $email;
 
       if (mysqli_query($connection, $sql) == $password){
-         //the user login credentyial is correct
+         //the user login credent
+          ial is correct
          //redirecting user to the personalized home page
          $_SESSION["email"] = $email;
 
